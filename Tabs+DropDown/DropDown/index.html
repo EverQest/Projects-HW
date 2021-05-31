@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu">
+          <ul class="nav">
+            <li class="flex">
+              <a onclick="Dropfoo()" class="dropbtn item" href="#">Home</a>
+              <p class="dropdown_content pad">
+                <a href="#">Item</a>
+                <a href="#">ITEM</a>
+                <a href="#">item</a>
+              </p>
+            </li>
+            <li class="flex">
+              <a onclick="Dropfoo()" class="dropbtn item" href="#">Tour</a>
+              <p class="dropdown_content pad">
+                <a href="#">Item</a>
+                <a href="#">ITEM</a>
+                <a href="#">item</a>
+              </p>
+            </li>
+            <li class="flex">
+              <a onclick="Dropfoo()" class="dropbtn item" href="#">Chat</a>
+              <p class="dropdown_content pad">
+                <a href="#">Item</a>
+                <a href="#">ITEM</a>
+                <a href="#">item</a>
+              </p>
+            </li>
+            <li class="flex">
+              <a onclick="Dropfoo()" class="dropbtn item" href="#">Contacts</a>
+              <p class="dropdown_content pad">
+                <a href="#">Item</a>
+                <a href="#">ITEM</a>
+                <a href="#">item</a>
+              </p>
+            </li>
+            <li class="flex">
+              <a onclick="Dropfoo()" class="dropbtn item" href="#">Help</a>
+              <p class="dropdown_content pad">
+                <a href="#">Item</a>
+                <a href="#">ITEM</a>
+                <a href="#">item</a>
+              </p>
+            </li>
+            <li class="flex">
+              <a onclick="Dropfoo()" class="dropbtn item" href="#">SingUp</a>
+              <p class="dropdown_content pad">
+                <a href="#">Item</a>
+                <a href="#">ITEM</a>
+                <a href="#">item</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script src="../jq .js"></script>
+      <script>
+        document.querySelectorAll(".dropbtn").forEach((btn) => {
+          btn.onclick = Dropfoo;
+        });
+        function Dropfoo() {
+          // console.log(this);
+          let index;
+          index = this;
+          const parent = this.closest(".flex");
+          // console.log(parent.querySelector(".dropdown_content"));
+          p_index = parent.querySelector(".dropdown_content");
+          p_index.classList.toggle("show");
+        }
+      </script>
+    </header>
+  </body>
+</html>

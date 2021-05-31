@@ -1,0 +1,64 @@
+.img_container {
+  width: 2.5vw;
+}
+.masterskaya_logo {
+  font-size: 1.5vw;
+}
+.a_masterskaya_logo {
+  text-decoration: none;
+  color: black;
+}
+.a_masterskaya_logo:hover {
+  color: black;
+}
+.link-hover:hover {
+  color: red;
+}
+li a {
+  color: black;
+  transition: 0.3s;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 1.5vw;
+  padding: 10px 2vw;
+}
+.header_hat {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.7vw 6.1vw;
+}
+.button_vhod {
+  color: black;
+  transition: 0.3s;
+  font-size: 2vw;
+  text-decoration: none;
+}
+.button_vhod:hover {
+  color: red;
+}
+.ul_wrap_block li {
+  display: block;
+}
+.Button_container {
+  display: flex;
+  justify-content: center;
+}
+.btn_container {
+  display: flex;
+  justify-content: center;
+}
+footer {
+  background-color: #dfdfdf;
+}
+.footer_container {
+  display: flex;
+  justify-content: center;
+}
+.ul_footer {
+  display: flex;
+  flex-direction: row;
+}
+.ul_footer li {
+  display: block;
+}

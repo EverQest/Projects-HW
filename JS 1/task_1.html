@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js</title>
+  </head>
+  <body>
+    <script>
+      var znachenie1 = prompt("Введите значение 1: ");
+      var znachenie2 = prompt("Введите значение 2: ");
+      if (znachenie1 === "true") {
+        alert("Значение 1 есть boolean"); // не удалось поработать с логическим оператором "||"
+      }
+      if (znachenie2 === "true") {
+        alert("Значение 2 есть boolean");
+      }
+      if (znachenie1 === "false") {
+        alert("Значение 1 есть boolean");
+      }
+      if (znachenie2 === "false") {
+        alert("Значение 2 есть boolean");
+      }
+      var a = Number(znachenie1);
+      if (a >= 0) {
+        alert("Значение 1 есть number");
+      }
+      if (a <= 0) {
+        alert("Значение 1 есть number");
+      }
+      var b = Number(znachenie2);
+      if (b >= 0) {
+        alert("Значение 2 есть number");
+      }
+      if (b <= 0) {
+        alert("Значение 2 есть number");
+      }
+      if (znachenie1 === znachenie2) {
+        alert("Значения полностю равны");
+      } else {
+        alert("Значение не могут быть равными");
+      }
+    </script>
+  </body>
+</html>

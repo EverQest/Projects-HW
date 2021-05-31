@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects_coffee</title>
+  </head>
+  <body>
+    <script>
+      var coffee_1 = {
+        name: "Капучино",
+        size: "Малeнький",
+        price: 2,
+        photo: '<img src="./imgs/capp.jpeg" width=300px alt="capp" />',
+      };
+      console.log(coffee_1);
+
+      var coffee_2 = {
+        name: "Американо",
+        size: "Средний",
+        price: 3,
+        photo: '<img src="./imgs/americ.jpg" width="300px" alt="americ" />',
+      };
+      console.log(coffee_2);
+
+      var coffee_3 = {
+        name: "Латте",
+        size: "Большой",
+        price: 5,
+        photo: ' <img src="./imgs/latt.jpg" width="300px" alt="latt" />',
+      };
+      console.log(coffee_3);
+      var coffee;
+      coffee = prompt("Выберите кофе: (1)-Капучино, (2)-Американо, (3)-Латте ");
+      if (coffee == 1) {
+        document.write(coffee_1.photo + "<br>");
+        document.write("Вы выбрали: " + coffee_1.name + "<br>");
+        document.write("Размер: " + coffee_1.size + "<br>");
+        document.write("Цена: " + coffee_1.price + "$<br>");
+      }
+      if (coffee == 2) {
+        document.write(coffee_2.photo + "<br>");
+        document.write("Вы выбрали: " + coffee_2.name + "<br>");
+        document.write("Размер: " + coffee_2.size + "<br>");
+        document.write("Цена: " + coffee_2.price + "$<br>");
+      }
+      if (coffee == 3) {
+        document.write(coffee_3.photo + "<br>");
+        document.write("Вы выбрали: " + coffee_3.name + "<br>");
+        document.write("Размер: " + coffee_3.size + "<br>");
+        document.write("Цена: " + coffee_3.price + "$<br>");
+      }
+
+      ////////////
+      var sugar = confirm("Сахар? ⬜   (ДА / НЕТ)");
+      if (sugar == 1) {
+        var sgr = document.write("<h3>Сахар: </h3>");
+      }
+      if (sugar == 2) {
+        var sgr = document.write("<h3>Сахар: 0</h3>");
+      }
+      while (sugar == 1) {
+        var sugar = confirm("Добавить еще?,  (ДА / НЕТ)");
+        document.write(" ⬜");
+      }
+      if (sugar == 2) {
+        alert("Без сахара");
+      }
+    </script>
+  </body>
+</html>

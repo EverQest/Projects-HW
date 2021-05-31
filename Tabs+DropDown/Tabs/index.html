@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu">
+          <ul class="nav">
+            <li>
+              <a class="tablinks" onclick="Tab_list('Home')" href="#">Home</a>
+            </li>
+            <li>
+              <a class="tablinks" onclick="Tab_list('Tour')" href="#">Tour</a>
+            </li>
+            <li>
+              <a class="tablinks" onclick="Tab_list('Download')" href="#"
+                >Download</a
+              >
+            </li>
+            <li>
+              <a class="tablinks" onclick="Tab_list('Contacts')" href="#"
+                >Contacts</a
+              >
+            </li>
+            <li>
+              <a class="tablinks" onclick="Tab_list('Help')" href="#">Help</a>
+            </li>
+            <li>
+              <a class="tablinks" onclick="Tab_list('SingUp')" href="#"
+                >SingUp</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="Home" class="tabcontent">
+        <h2>Home page</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex earum
+          autem sapiente id voluptatum quia numquam distinctio quis eligendi
+          maiores! Ducimus repellat nesciunt numquam quasi sequi, porro ipsam a
+          expedita.
+        </p>
+      </div>
+      <div id="Tour" class="tabcontent">
+        <h2>Tour page</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div id="Download" class="tabcontent">
+        <h2>Download page</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          atque eligendi libero beatae dolorem iste excepturi velit, aliquid
+          harum corporis dolores exercitationem iure accusamus et quidem omnis
+          explicabo at animi.
+        </p>
+      </div>
+      <div id="Contacts" class="tabcontent">
+        <h2>Contacts page</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+          necessitatibus quia distinctio alias quam corrupti!
+        </p>
+      </div>
+      <div id="Help" class="tabcontent">
+        <h2>Help page</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+          molestias quia molestiae sequi! Eveniet ipsa magnam incidunt
+          perspiciatis ipsum dolor ab repudiandae a doloremque, aspernatur
+          consequuntur placeat aut sit? Repudiandae ipsa sunt cumque porro quos
+          amet dolores odit suscipit est rerum adipisci beatae tempora commodi
+          eos eligendi recusandae, inventore soluta eius et mollitia. Corrupti,
+          minima dolor, voluptatibus maxime delectus libero aliquam nostrum, rem
+          est ex consequuntur. Assumenda pariatur aspernatur, necessitatibus
+          quod eum voluptates unde dolore officiis fugit odio sit minima error!
+          Nemo vero fugit facere qui illo dicta, perferendis corporis odio
+          laborum! Culpa ea voluptas repudiandae soluta animi earum. Sequi?
+        </p>
+      </div>
+      <div id="SingUp" class="tabcontent">
+        <h2>SingUp page</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <script>
+        var i, tabcontent, tablinks;
+
+        function Tab_list(currentTab) {
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          document.getElementById(currentTab).style.display = "block";
+        }
+      </script>
+    </main>
+  </body>
+</html>

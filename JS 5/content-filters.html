@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>content filter</title>
+  </head>
+  <style>
+    p {
+      color: black;
+    }
+  </style>
+  <body>
+    <div id="elem">
+      <p>
+        JavaScript — мультипарадигменный язык программирования. Поддерживает
+        объектно-ориентированный, императивный и функциональный стили. Является
+        реализацией языка ECMAScript.
+      </p>
+      <p>
+        HTML (от англ. HyperText Markup Language — «язык гипертекстовой
+        разметки») — стандартизированный язык разметки документов во Всемирной
+        паутине. Большинство веб-страниц содержат описание разметки на языке
+        HTML (или XHTML).
+      </p>
+    </div>
+
+    <script>
+      if (document.getElementsByTagName("p") == "") {
+        alert("Нет текста");
+      } else {
+        document.getElementById("elem").style.backgroundColor = "yellow";
+      }
+    </script>
+    <script>
+      //TODO on VanillaJS
+      //$('p:contains(some text)')
+    </script>
+  </body>
+</html>

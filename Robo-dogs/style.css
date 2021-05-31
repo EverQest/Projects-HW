@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Inconsolata:wght@300&display=swap');
+html {
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    margin: 0;
+}
+header{
+    background-color: rgb(221, 221, 221);
+    padding: 7px;
+}
+.menu {
+    padding: 0px;
+}
+.menu li {
+    display: inline-block;
+    color: rgb(235, 217, 217);
+    cursor: pointer;
+}
+.robotlogo {
+    width: 40%;
+}
+.search {
+    width: 20%;
+}
+.menu li a {
+        background-color: transparent;
+        text-decoration: none;
+        color: rgb(0, 0, 0);  
+        padding: 25px;
+        padding-left: 45px;
+        padding-right: 45px;
+        background-color: rgb(255, 255, 255);
+
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+.rbts {
+    width: 100%;
+}    
+.imgrob {
+ width: 363%;
+}
+.robots {
+    display: flex;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+.robots2 {
+    padding: 20px;
+}
+.robots3 {
+    padding: 20px;
+}
+nav {
+    display: inline-block;
+    text-align: center;
+}
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header ul li a{
+    transition: background-color 1s cubic-bezier(0.42, 0, 0, 1.09);
+  }
+  
+  header ul li a:hover {
+    background-color: rgb(48, 123, 179);
+  }
+  .video {
+      text-align: center;
+      margin: 50px;
+  }
+
+  .h2
+  {
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Inconsolata', monospace;
+  }
+  h3{
+      margin-bottom: 30px;
+  }
+  h1 {
+      text-align: center;
+  }
+  .boston
+  {
+      color: rgb(48, 123, 179);
+  }
+  .age {
+    width: 80%;
+    margin-left: 50px;
+  }
+  .img_bottom {
+      text-align: center;
+  }
+  .quote
+  {
+    display: block;
+    padding: 12px 24px;
+    background: 0 0;
+    border-left: 4px solid rgb(31, 75, 225);
+    box-sizing: border-box;
+    margin: 0 0 5px 100px;
+  }
+.boston_img_link {
+    padding: 10px;
+    background-color: rgb(171 224 245);
+    display: flex;
+}
+.boston_img
+{
+width: 100%;
+background-color: rgb(171 224 245);
+margin-right: 20px;
+}
+.footerimg
+{
+    background-color: rgb(0, 53, 90);
+    flex-direction: row;
+    display: flex;
+}
+.menu-item {
+    text-transform: uppercase;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+.li_footer
+{
+    display: flex;
+    font-size: 25px;
+}
+.menuchildren
+{
+    padding: 20px;
+}
+.li1 {
+    margin-right: 50px;
+    margin: 20px;
+}
+.li2 {
+    margin-right: 50px;
+    margin: 20px;
+}
+.li3{
+    margin-right: 50px;
+    margin: 20px;
+}
+.li4{
+    margin-right: 50px;
+    margin: 20px;
+}
+.li_child {
+    list-style-type: none;
+    list-style-image: none;
+    padding-left: 0;
+}
+.footer-menu__second-level
+{
+    list-style-type: none;
+    list-style-image: none;
+    padding-left: 0;
+}
+.menu-item a {
+    color: #60caff;
+    text-decoration: none;
+    font-size: 10px;
+}
+.span {
+    color: rgb(255, 255, 255);
+}
+.hr {
+    margin: 0px;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+.icons {
+    padding: 18px;
+    margin: 10px;
+}
+.container_icons
+{
+    display: flex;
+    width: 20px;
+    flex-direction: row;
+    list-style-type: none;
+    list-style-image: none;
+}
+.youtube {
+    width: 81%;
+}
+.footermenu {
+    background-color:  rgb(0, 53, 90);
+}

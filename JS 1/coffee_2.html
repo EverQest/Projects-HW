@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coffee</title>
+  </head>
+  <body>
+    <script>
+      var cupSize = 2;
+      var imgWidth = 200;
+      var sum = 0;
+
+      cupSize = prompt("Select size: 1, 2 or 3", "2");
+
+      switch (cupSize) {
+        case "1":
+          sum += 10;
+          imgWidth = 100;
+          break;
+        case "2":
+          sum += 15;
+          imgWidth = 200;
+          break;
+        case "3":
+          sum += 20;
+          imgWidth = 300;
+          break;
+      }
+
+      if (sum > 0) {
+        document.write(
+          '<img src="./img/coffee.jpg" alt="coffee" width=' +
+            imgWidth +
+            " /><br><h3>Thank You ❤️</h3>price: 💲 " +
+            sum
+        );
+        var sugar = prompt("Sugar? ⬜   (1-yes,  2-no)");
+        if (sugar == 1) {
+          var sgr = document.write("<h3>Sugar: </h3>");
+        }
+        if (sugar == 2) {
+          var sgr = document.write("<h3>Sugar: 0</h3>");
+        }
+        while (sugar == 1) {
+          var sugar = prompt("addet sugar, enough?  (1-add, 2-end)");
+          document.write(" ⬜");
+        }
+        if (sugar == 2) {
+          alert("no sugar");
+        }
+      } else {
+        document.write("<h3>milk? 🥛))</h3>");
+      }
+    </script>
+  </body>
+</html>

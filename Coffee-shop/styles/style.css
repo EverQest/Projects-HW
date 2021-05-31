@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+body {
+  margin: 0px;
+  font-family: "Exo 2", sans-serif;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  align-items: center;
+}
+.price {
+  color: rgb(192, 170, 131);
+  font-family: "Noto Sans", sans-serif;
+  padding-top: 16px;
+  font-size: 30px;
+}
+.menu li {
+  display: inline-block;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+header {
+  background-color: rgb(112, 99, 76);
+}
+.menu li a:hover {
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.li_menu_before::after {
+  font-size: 20px;
+  content: ">";
+  margin: 0px 0 0 10px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  transition: color 0.5s ease;
+}
+.li_menu_before::after {
+  font-size: 20px;
+  content: ">";
+  margin: 0px 0 0 10px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  transition: color 0.5s ease;
+}
+.li_menu_before:hover::after {
+  font-size: 20px;
+  content: "˅";
+  margin: 0px 0 0 10px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  transition: color 0.5s ease;
+}
+.img_header {
+  width: 100%;
+  padding-top: 5px;
+}
+.search_header {
+  width: 20px;
+  padding-left: 40px;
+}
+.buy {
+  font-size: 30px;
+  padding: 5px;
+  background-color: rgb(192, 170, 131);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.bgimg {
+  background-image: url(../imgs/coffee.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  align-content: center;
+  position: relative;
+  border-bottom: 5px solid black;
+}
+.h1 {
+  font-size: 10vh;
+  color: rgb(0, 0, 0);
+  font-family: "Marck Script", cursive;
+  text-align: center;
+  margin: 20px;
+}
+.h1_ms {
+  color: rgb(255, 255, 255);
+}
+.h2 {
+  margin: 0px;
+}
+.h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.bgimg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(72, 50, 20, 0.761);
+  opacity: 0.92;
+}
+.coffee {
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 8px));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+.coffee_items {
+  background-color: white;
+  text-align: center;
+  align-content: center;
+  color: rgb(0, 0, 0);
+  border: 1px solid #f6f6f6;
+}
+.add_to_buy {
+  padding: 15px 20px;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgb(192, 170, 131);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+.add_button {
+  padding: 20px;
+}
+.coffee_items:hover {
+  border: 0 0 100px rgba(0, 0, 0, 0.5);
+}
+.add_to_buy:hover {
+  background-color: black;
+}
+.img_buy {
+  width: 200px;
+}
+main {
+  background-color: rgb(223, 223, 223);
+}
+.del {
+  color: rgb(109, 109, 109);
+  font-size: 20px;
+  padding-top: 15px;
+}
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.p {
+  position: absolute;
+  left: 130px;
+  top: 0px;
+}
+.p span {
+  padding: 5px 10px;
+  color: white;
+  background: rgb(218, 8, 8);
+}
+div div p span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  height: 0;
+  border-style: solid;
+  border-width: 13px 0 13px 7px;
+  border-color: transparent transparent transparent #fff;
+  background-color: rgb(218, 8, 8);
+}
+.map_container {
+  background-color: rgb(255, 255, 255);
+}
+.map_text {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Noto Sans", sans-serif;
+  padding-top: 25px;
+  margin-top: 10px;
+}
+.map_text2 {
+  font-size: 20x;
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 10px;
+}
+.map {
+  width: 100%;
+}
+.map_wrap {
+  margin-top: 85px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.li_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 40px;
+  padding: 10px;
+}
+.li_grid li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.li_grid li a:hover {
+  color: rgb(139, 84, 0);
+  transition: all 0.3s ease;
+}
+.ul_child {
+  display: flex;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.li_grid li::before {
+  content: ">";
+  display: block;
+  display: inline-block;
+  font-size: inherit;
+  position: absolute;
+  margin: -1px 0 0 -20px;
+}
+.sponsors {
+  margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  align-items: center;
+  background-color: rgb(223, 223, 223);
+}
+.sponsors_img {
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.testimonials {
+  font-family: "Exo 2", sans-serif;
+  background-image: url(../imgs/coffe_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 60px;
+}
+.testimonials_text {
+  font-family: "Marck Script", cursive;
+  font-size: 10vh;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 20px;
+  padding-top: 20px;
+}
+.inner {
+  text-align: center;
+  border: rgb(192, 170, 131) solid 8px;
+  padding: 60px 65px 60px;
+}
+.mini {
+  font-size: 15px;
+  color: rgb(255 72 0);
+}
+.medium {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+.icon_t {
+  font-size: 20vh;
+  color: rgb(255, 255, 255);
+  margin-top: -120px;
+}
+.before_footer {
+  padding: 20px;
+  background-color: rgb(112, 99, 76);
+  text-align: center;
+}
+.footer {
+  background-image: url(../imgs/bg_footer.jpg);
+  background-position: center;
+  color: #ffffff;
+  padding: 20px;
+}
+.content_2 {
+  color: rgb(192, 170, 131);
+  font-size: 35px;
+}
+.content_3 {
+  color: rgb(192, 170, 131);
+  font-size: 35px;
+}
+
+.content_4 {
+  color: rgb(176 176 176);
+}
+.content_5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.brown {
+  color: rgb(192, 170, 131);
+}
+.content_5 div a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: color 0.5s ease;
+  font-size: 17px;
+}
+.content_5 div a::before {
+  content: ">";
+  font-size: 16px;
+  margin-right: 8px;
+  color: rgb(255, 255, 255);
+}
+.content_5 div a:hover {
+  color: rgb(192, 170, 131);
+}
+.container_wrap {
+  padding: 15px;
+  display: grid;
+  align-items: center;
+}
+.container_wrap_item {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.btn_wrap {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  position: absolute;
+  margin-top: 45%;
+}
+.flex_btn {
+  display: flex;
+  justify-content: center;
+}
+.btn a {
+  background-color: rgb(192, 170, 131);
+  padding: 15px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+.btn a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 1px 3px black;
+}
+.text_logo {
+  font-family: "Marck Script", cursive;
+  position: absolute;
+  margin-top: 25%;
+  font-size: 130px;
+  color: rgb(255 255 255);
+}
+
+/* formA!!! */
+
+.transparent {
+  position: relative;
+  max-width: 400px;
+  padding: 60px 50px;
+  margin: 50px auto 0;
+  background-image: url(../imgs/pattern.jpg);
+  background-size: cover;
+  border-radius: 20px;
+}
+.transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(0 0 0 / 50%) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.form-inner {
+  position: relative;
+}
+.form-inner h3 {
+  position: relative;
+  margin-top: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.form-inner h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 60px;
+  background: #1762ee;
+}
+.form-inner label {
+  display: block;
+  padding-left: 15px;
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.form-inner input {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  margin: 10px 0 15px;
+  border-width: 0;
+  line-height: 40px;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+}
+.form-inner input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+#custom-checkbox + label {
+  position: relative;
+  margin: 20px 0;
+  text-transform: none;
+  cursor: pointer;
+}
+#custom-checkbox + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: text-top;
+  background: rgb(255, 255, 255);
+}
+#custom-checkbox:checked + label:before {
+  background: #1762ee;
+}
+#custom-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  left: 20px;
+  top: 9px;
+  background: white;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+    4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+.form_wrap {
+  padding: 150px;
+}
+.container_form {
+  background-color: rgb(192 170 131);
+}
+.btn_submit:hover {
+  background-color: #0647c1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn_submit {
+  background: #1762ee;
+}
+.text_area {
+  border-radius: 10px;
+}
+
+.products_wrap {
+  display: flex;
+  justify-content: center;
+  margin: 100px 100px 0px;
+  padding: 100px;
+}
+.bg_prod {
+  background-color: rgb(223, 223, 223);
+}
+.sponcor_descr {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: "Marck Script", cursive;
+  background-color: white;
+}
+.coffee_item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}

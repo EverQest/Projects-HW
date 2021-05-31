@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio_button_colour</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: white;
+      }
+    </style>
+    <script src="./jq.js"></script>
+    <p>Default<input id="radio_default" type="radio" name="type" checked /></p>
+    <p>Random<input id="radio_random" type="radio" name="type" /></p>
+    <input id="submit" type="button" value="Переключить" />
+    <script>
+      let i = 0;
+      let arr_col = ["colour", "green", "blue", "yellow", "red", "grey"];
+
+      submit.onclick = function () {
+        if (document.getElementById("radio_default").checked) {
+          if (arr_col.length === i + 1) {
+            i = 0;
+          }
+          i++;
+          $("body").css("background-color", arr_col[i]);
+        }
+        if (document.getElementById("radio_random").checked) {
+          let random = Math.floor(Math.random() * arr_col.length + 1);
+          $("body").css("background-color", arr_col[random]);
+        }
+      };
+    </script>
+  </body>
+</html>

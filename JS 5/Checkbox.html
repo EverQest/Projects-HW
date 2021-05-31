@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+      }
+      .wrap {
+        background-color: gray;
+        border-radius: 5px;
+      }
+    </style>
+    <script src="./jq.js"></script>
+    <form action="">
+      <div class="wrap">
+        <input type="checkbox" />
+        <input type="checkbox" />
+        <input type="checkbox" />
+        <input type="checkbox" />
+        <input type="checkbox" />
+      </div>
+    </form>
+    <script>
+      $(function () {
+        function countChecked() {
+          $(":checkbox").prop("disabled", false);
+          checkedbox();
+        }
+        $(":checkbox").click(countChecked);
+
+        function checkedbox() {
+          if ($(":checkbox:checked").length === 3) {
+            $(":checkbox").prop("disabled", true);
+            $(":checkbox:checked").prop("disabled", false);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

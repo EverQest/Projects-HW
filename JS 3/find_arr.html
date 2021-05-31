@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find_arr</title>
+  </head>
+  <body>
+    <script>
+      var a = prompt("Сколько элементов массива вы хотите?");
+      arr = [];
+      var key = prompt("Значение которое вы хотите найти:  ");
+      for (i = 0; i < a; i++) {
+        value = prompt("Введите значение массива :  ");
+        arr.push(value);
+      }
+      function keyfind() {
+        for (j = 0; j < a; j++) {
+          if (arr[j] === key) {
+            console.log(arr[j] + "=" + key);
+            return true;
+          }
+        }
+        return false;
+      }
+      keyfind();
+    </script>
+  </body>
+</html>

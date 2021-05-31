@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while game</title>
+  </head>
+  <body>
+    <script>
+      var symbol = prompt("Введите слово");
+      var symbol2 = prompt("Короткое Описание");
+      alert("Описание:  " + symbol2 + ", попробуйте угадать");
+      var Answer = "";
+      var AttemptsLimit = 10;
+      var Attempt = 0;
+
+      while (Attempt < AttemptsLimit) {
+        Attempt++;
+        Answer = prompt(
+          "Отгадай слово: Попытка :  " +
+            Attempt +
+            "из 10 (для выхода нажмиет 'Ок' или 'Отмена')"
+        );
+        console.log(Answer);
+        if (Answer == "" || Answer == null) {
+          alert("Выход");
+          break;
+        } else if (Answer === symbol) {
+          alert("Правильно");
+          break;
+        }
+        if (Attempt == 10) {
+          alert("Вы использывали все попытки");
+        }
+      }
+    </script>
+  </body>
+</html>

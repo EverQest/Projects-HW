@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classes</title>
+    <style>
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      button {
+        cursor: pointer;
+      }
+      #block {
+        padding: 10px;
+      }
+      .hide {
+        display: none;
+      }
+      .flex {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggle-btn">toggle button</button>
+    <div id="block" class="show">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur,
+        sit, quae inventore explicabo sed earum commodi autem magni minus
+        numquam facilis praesentium blanditiis. Suscipit voluptates perferendis
+        recusandae illum consequatur consequuntur perspiciatis placeat minus
+        distinctio excepturi doloremque, odio dolore culpa soluta veniam
+        voluptas. Harum, nemo beatae mollitia, sunt optio vel deleniti magnam
+        omnis perferendis enim nihil tenetur! Voluptatum, error? Repudiandae,
+        consequatur? Ducimus, harum? Quos excepturi, cupiditate eligendi natus
+        voluptatem ab debitis rem sequi? Dignissimos ea, iste voluptatum vel
+        atque consectetur provident error magni soluta placeat fugiat odio
+        nobis. Maxime earum modi cum fugit vel ipsa. Ea itaque commodi possimus
+        voluptates animi!
+      </p>
+    </div>
+    <script>
+      const toggleBtn = document.getElementById("toggle-btn");
+      const div = document.getElementById("block");
+
+      function toggleBtnHandler() {
+        if (div.classList.contains("show")) {
+          div.classList.add("hide");
+          div.classList.remove("show");
+        } else if (div.classList.contains("hide")) {
+          div.classList.add("show");
+          div.classList.remove("hide");
+        }
+        console.log(div.className);
+      }
+      toggleBtn.onclick = toggleBtnHandler;
+    </script>
+  </body>
+</html>

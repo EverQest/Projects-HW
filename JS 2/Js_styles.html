@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styles</title>
+  </head>
+  <body>
+    <script>
+      let styles = ["Джаз", "Блюз"];
+      console.log("Изначальный массив:  " + styles);
+      styles.push("Рок-н-ролл");
+      console.log("Добавим немного рока:  " + styles);
+      var a = styles.length;
+      if (a % 2 == 0) {
+        styles.splice(a / 2, 1, "Классика");
+      } else {
+        styles.splice(a / 2, 1, "Классика");
+      }
+      console.log("Замена на классику:  " + styles);
+      console.log("Удаляем элемент:  " + styles.splice(0, 1, "Реп", "Регги"));
+      console.log("Добавим регги и реп:  " + styles);
+    </script>
+  </body>
+</html>

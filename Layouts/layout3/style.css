@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+}
+.container {
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 5px auto;
+  padding: 0px;
+  max-width: 960px;
+  background-color:transparent;
+  font-size: 25px;
+  font-weight: 600;
+}
+.main {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.main > .hero {
+background-color: rgb(66, 164, 221);
+color: rgb(255, 255, 255);
+padding: 20%;
+width: 100%;
+}
+
+.main > .space > .maincontent {
+    background-color: rgb(31, 65, 85);
+    color: rgb(255, 255, 255);
+    padding: 176px;
+    width: 100%;
+}
+
+.main > .space > .img_extra > .image {
+    background-color: rgb(159, 209, 238);
+    padding: 83px;
+    width: 100%;
+}
+
+.main > .space > .none {
+    background-color: rgb(255, 255, 255);
+    padding: 49px;
+    width: 100%;
+    color: transparent;
+}
+
+.main > .space > .img_extra > .extra {
+    background-color: rgb(62, 153, 107);
+    padding: 83px;
+    width: 100%;
+}
+
+.space {
+    display: flex;
+}
+
+
+.img_extra {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+footer {
+        display: block;
+        margin: 0px;
+        padding: 30px;
+        background-color:rgb(255, 198, 93);
+}
+
+
+
+
+
+
+.mainhead
+{
+    color: rgb(255, 255, 255);
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(0, 0, 0);
+}
+.mainhead > div {
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+}
+.mainhead > nav {
+    background-color: rgb(240, 78, 105);
+    flex: 3;
+    padding: 15px;
+}
+.extraimg {
+    display: block;
+
+}

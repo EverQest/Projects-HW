@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change color exmp</title>
+    <script src="./jq.js"></script>
+    <style>
+      .block {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+      }
+      .hide {
+        display: none;
+      }
+      .main_img{cursor: pointer;}
+    </style>
+
+<div class="hide">
+  <img src="./imgs/img_1.png" alt="img">
+  <img src="./imgs/img_2.png" alt="img">
+  <img src="./imgs/img_3.png" alt="img">
+</div>
+<img class="main_img" src="./imgs/img_1.png" alt="img">
+<br>
+<script>     
+let i= 1;
+  $(".main_img").click(function(){
+   var src = this.src;
+   console.log(src);
+   $(".main_img").attr("src", "./imgs/img_"+ i++ +".png");
+if (i === 4){i=1}
+});
+</script>
+</body>
+</html>

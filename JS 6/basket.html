@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket</title>
+  </head>
+  <script src="./jq.js"></script>
+  <style>
+    body {
+      margin: 0px;
+      font-size: 2vh;
+      display: flex;
+      justify-content: center;
+    }
+    .basket {
+      width: 5vh;
+    }
+    .wrap {
+      display: flex;
+      justify-content: center;
+      background-color: rgb(148, 148, 148);
+      flex-direction: row;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+    }
+    .block {
+      display: block;
+      background-color: rgb(248, 248, 248);
+    }
+    .block .content_block {
+      min-height: 50px;
+      border-bottom: 2px solid grey;
+    }
+    .content {
+      width: 15vh;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    .row_btn {
+      display: flex;
+      flex-direction: row;
+    }
+    .btn {
+      width: 30px;
+      outline: none;
+    }
+    .btn:active {
+      background-color: rgb(221, 221, 221);
+    }
+    .btn1 {
+      border-radius: 5px 0px 0px 5px;
+      border-right: 0px;
+    }
+    .btn2 {
+      border-radius: 0px 5px 5px 0px;
+      border-left: 0px;
+    }
+    .delete {
+      padding: 10px;
+      background-color: rgb(202, 61, 61);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+    }
+    .delete:hover {
+      color: white;
+      background-color: rgb(255, 0, 0);
+      cursor: pointer;
+    }
+    .delete:active {
+      background-color: black;
+    }
+    .name {
+      font-style: italic;
+    }
+    .finisher {
+      background-color: rgb(148, 148, 148);
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <img class="basket" src="./imgs/backet.png" />
+      </div>
+
+      <div class="block">
+        <div class="content_block" id="content_1">
+          <div class="row">
+            <img class="content" src="./imgs/bar.png" />
+            <div class="">
+              <div class="name">Snickers</div>
+              <div id="price1">Цена: 1.5$</div>
+              <div id="amount1">Количество: 1шт.</div>
+              <div class="row_btn">
+                <input
+                  class="btn btn1"
+                  id="btn_1_add"
+                  type="button"
+                  value="+"
+                />
+                <input
+                  class="btn btn2"
+                  id="btn_1_remove"
+                  type="button"
+                  value="-"
+                />
+              </div>
+              <p class="delete" id="delete1">Удалить</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content_block" id="content_2">
+          <div class="row">
+            <img class="content" src="./imgs/candys.png" />
+            <div class="">
+              <div class="name">Millennium</div>
+              <div id="price2">Цена: 10$</div>
+              <div id="amount2">Количество: 1шт.</div>
+              <div class="row_btn">
+                <input
+                  class="btn btn1"
+                  id="btn_2_add"
+                  type="button"
+                  value="+"
+                />
+                <input
+                  class="btn btn2"
+                  id="btn_2_remove"
+                  type="button"
+                  value="-"
+                />
+              </div>
+              <p class="delete" id="delete2">Удалить</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content_block" id="content_3">
+          <div class="row">
+            <img class="content" src="./imgs/cola.png" />
+            <div class="">
+              <div class="name">Coca-Cola</div>
+              <div id="price3">Цена: 4$</div>
+              <div id="amount3">Количество: 1шт.</div>
+              <div class="row_btn">
+                <input
+                  class="btn btn1"
+                  id="btn_3_add"
+                  type="button"
+                  value="+"
+                />
+                <input
+                  class="btn btn2"
+                  id="btn_3_remove"
+                  type="button"
+                  value="-"
+                />
+              </div>
+              <p class="delete" id="delete3">Удалить</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content_block" id="content_4">
+          <div class="row">
+            <img class="content" src="./imgs/sousage.png" />
+            <div class="">
+              <div class="name">Колбаса</div>
+              <div id="price4">Цена: 7$</div>
+              <div id="amount4">Количество: 1шт.</div>
+              <div class="row_btn">
+                <input
+                  class="btn btn1"
+                  type="button"
+                  id="btn_4_add"
+                  value="+"
+                />
+                <input
+                  class="btn btn2"
+                  type="button"
+                  id="btn_4_remove"
+                  value="-"
+                />
+              </div>
+              <p class="delete" id="delete4">Удалить</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Конец -->
+      <div class="finisher" id="all"></div>
+    </div>
+    <script>
+      let all_prices = 22.5;
+      let x1 = 1;
+      let price1 = 1.5;
+      btn_1_add.onclick = function () {
+        x1++;
+        price1 = price1 + 1.5;
+        all_prices = all_prices + 1.5;
+        amount1.innerHTML = "Количество: " + x1 + "шт.";
+        document.getElementById("price1").innerHTML = "Цена: " + price1 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      btn_1_remove.onclick = function () {
+        x1--;
+        price1 = price1 - 1.5;
+        all_prices = all_prices - 1.5;
+        if (x1 <= 0) {
+          alert("В корзине должен быть товар!");
+          x1 = 1;
+          price1 = 1.5;
+          all_prices = all_prices + 1.5;
+        }
+        amount1.innerHTML = "Количество: " + x1 + "шт.";
+        document.getElementById("price1").innerHTML = "Цена: " + price1 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      delete1.onclick = function () {
+        content_1.remove();
+        all_prices = all_prices - price1;
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+
+      /////
+
+      let x2 = 1;
+      let price2 = 10;
+      btn_2_add.onclick = function () {
+        x2++;
+        price2 = price2 + 10;
+        all_prices = all_prices + 10;
+        amount2.innerHTML = "Количество: " + x2 + "шт.";
+        document.getElementById("price2").innerHTML = "Цена: " + price2 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      btn_2_remove.onclick = function () {
+        x2--;
+        price2 = price2 - 10;
+        all_prices = all_prices - 10;
+        if (x2 <= 0) {
+          alert("В корзине должен быть товар!");
+          x2 = 1;
+          price2 = 10;
+          all_prices = all_prices + 10;
+        }
+        amount2.innerHTML = "Количество: " + x2 + "шт.";
+        document.getElementById("price2").innerHTML = "Цена: " + price2 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+
+      /////
+
+      let x3 = 1;
+      let price3 = 4;
+      btn_3_add.onclick = function () {
+        x3++;
+        price3 = price3 + 4;
+        all_prices = all_prices + 4;
+        amount3.innerHTML = "Количество: " + x3 + "шт.";
+        document.getElementById("price3").innerHTML = "Цена: " + price3 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      btn_3_remove.onclick = function () {
+        x3--;
+        price3 = price3 - 4;
+        all_prices = all_prices - 4;
+        if (x3 <= 0) {
+          alert("В корзине должен быть товар!");
+          x3 = 1;
+          price3 = 4;
+          all_prices = all_prices + 4;
+        }
+        amount3.innerHTML = "Количество: " + x3 + "шт.";
+        document.getElementById("price3").innerHTML = "Цена: " + price3 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+
+      /////
+
+      let x4 = 1;
+      let price4 = 7;
+      btn_4_add.onclick = function () {
+        x4++;
+        price4 = price4 + 7;
+        all_prices = all_prices + 7;
+        amount4.innerHTML = "Количество: " + x4 + "шт.";
+        document.getElementById("price4").innerHTML = "Цена: " + price4 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      btn_4_remove.onclick = function () {
+        x4--;
+        price4 = price4 - 7;
+        all_prices = all_prices - 7;
+        if (x4 <= 0) {
+          alert("В корзине должен быть товар!");
+          x4 = 1;
+          price4 = 7;
+          all_prices = all_prices + 7;
+        }
+        amount4.innerHTML = "Количество: " + x4 + "шт.";
+        document.getElementById("price4").innerHTML = "Цена: " + price4 + "$";
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+
+      ///////-----//////
+
+      delete1.onclick = function () {
+        content_1.remove();
+        all_prices = all_prices - price1;
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      delete2.onclick = function () {
+        content_2.remove();
+        all_prices = all_prices - price2;
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      delete3.onclick = function () {
+        content_3.remove();
+        all_prices = all_prices - price3;
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+      delete4.onclick = function () {
+        content_4.remove();
+        all_prices = all_prices - price4;
+        document.getElementById("all").innerHTML = "Цена: " + all_prices + "$";
+      };
+    </script>
+  </body>
+</html>
